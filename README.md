@@ -56,6 +56,7 @@ text
 ```bash
 git clone https://github.com/Saunakghosh10/healthcare-searchtool.git
 cd healthcare-searchtool
+```
 Create and activate virtual environment:
 
 bash
@@ -227,36 +228,36 @@ Your custom answer generation template here...
 """
 ⚠️ Limitations & Disclaimer
 Important Limitations
-Not Medical Advice: This tool is for educational and research purposes only
+- Not Medical Advice: This tool is for educational and research purposes only
 
-Information Currency: PubMed coverage varies by topic; some areas may have limited recent research
+- Information Currency: PubMed coverage varies by topic; some areas may have limited recent research
 
-Model Biases: LLMs may inherit biases from training data
+- Model Biases: LLMs may inherit biases from training data
 
-API Dependencies: Requires stable internet connection and API availability
+- API Dependencies: Requires stable internet connection and API availability
 
-Response Variability: Answers may vary for the same question due to stochastic generation
+- Response Variability: Answers may vary for the same question due to stochastic generation
 
 Safety Features
-Clear disclaimers about non-professional medical advice
+-Clear disclaimers about non-professional medical advice
 
-Fallback to general knowledge when PubMed lacks information
+-Fallback to general knowledge when PubMed lacks information
 
-Source attribution for transparency
+-Source attribution for transparency
 
-Response length limiting to prevent information overload
+-Response length limiting to prevent information overload
 
 🎯 Use Cases
 Target Users:
-Medical Students - Quick research and literature reviews
+1. Medical Students - Quick research and literature reviews
 
-Healthcare Professionals - Staying updated with latest research
+2. Healthcare Professionals - Staying updated with latest research
 
-Researchers - Identifying relevant papers and trends
+3. Researchers - Identifying relevant papers and trends
 
-Patients - Understanding medical conditions (with professional consultation)
+4. Patients - Understanding medical conditions (with professional consultation)
 
-Educators - Teaching medical concepts with current references
+5. Educators - Teaching medical concepts with current references
 
 Complete user personas and use case scenarios in the project presentation
 
@@ -324,7 +325,8 @@ Email: healthcare.chatbot@gmail.com
 📚 Additional Resources
 Project Presentation: Canva Slides
 
-Demo Video: [Add your demo video link here]
+Demo Video: [Add your demo video link here] 
+
 
 Technical Documentation: [Add your documentation link here]
 
