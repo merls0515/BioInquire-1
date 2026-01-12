@@ -1,0 +1,30 @@
+{
+    "models": {
+        "keyword_generator": "mistralai/Mistral-7B-Instruct-v0.2",
+        "answer_generator": "mistralai/Mistral-7B-Instruct-v0.2",
+        "alternative_models": [
+            "tiiuae/falcon-7b-instruct",
+            "google/flan-t5-base",
+            "mistralai/Mixtral-8x7B-Instruct-v0.1"
+        ]
+    },
+    "pubmed": {
+        "max_results": 1,
+        "timeout": 10,
+        "tool": "HealthcareSearchTool_v1.0"
+    },
+    "generation": {
+        "max_new_tokens": 500,
+        "temperature": 0.7,
+        "top_p": 0.9
+    },
+    "pipeline": {
+        "components": [
+            "keyword_prompt_builder",
+            "keyword_llm",
+            "pubmed_fetcher",
+            "prompt_builder",
+            "llm"
+        ]
+    }
+}
