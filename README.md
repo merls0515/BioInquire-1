@@ -111,7 +111,7 @@ text
 What are the risk factors for developing type 2 diabetes?
 
 
-🛠️ Technical Details
+### 🛠️ Technical Details
 Components
 PubMedFetcher: Custom Haystack component that queries PubMed API and returns standardized documents
 
@@ -151,7 +151,7 @@ config.json: Model selection, PubMed settings, generation parameters
 
 Prompt templates: Customizable prompt engineering for different use cases
 
-📊 Performance
+### 📊 Performance
 Average Response Time: 10-15 seconds
 
 PubMed Search Relevance: ~85% precision
@@ -162,7 +162,7 @@ Token Usage: ~600-800 tokens per query
 
 Supported Queries: All medical/biomedical topics covered by PubMed
 
-🔧 Customization
+### 🔧 Customization
 
 Changing Models
 Edit config.json to use different models:
@@ -195,7 +195,7 @@ Your custom prompt template here...
 prompt_template = """
 Your custom answer generation template here...
 """
-⚠️ Limitations & Disclaimer
+### ⚠️ Limitations & Disclaimer
 Important Limitations
 Not Medical Advice: This tool is for educational and research purposes only
 
@@ -243,7 +243,7 @@ Performance optimizations
 📄 License
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-🙏 Acknowledgments
+### 🙏 Acknowledgments
 PubMed for providing access to biomedical literature
 
 Hugging Face for hosting the language models
