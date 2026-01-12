@@ -15,18 +15,23 @@
 
 PubMed Healthcare Chatbot is an AI-powered assistant designed to provide healthcare-related information by integrating PubMed search capabilities with Large Language Models (LLMs). This chatbot leverages advanced natural language processing to understand user queries, retrieves relevant articles from PubMed, and generates accurate, evidence-based responses.
 
+## 📊 Project Presentation
+
+**View the complete project presentation:** [Canva Presentation](https://www.canva.com/design/DAF-kSKhMmM/wtGEH-f01isdV-sUVJIryg/edit?utm_content=DAF-kSKhMmM&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
+
+*Includes: Project architecture, workflow diagrams, technical implementation, challenges & solutions, and future enhancements.*
+
 ### ✨ Key Features
 
-- Natural Language Processing**: Understands and processes natural language medical queries
-- PubMed Integration**: Searches the PubMed database for relevant, up-to-date medical literature
-- LLM Augmentation**: Uses advanced language models (Mistral-7B) to synthesize research findings
-- Intelligent Keyword Generation**: Automatically converts questions into PubMed-optimized search terms
-- Evidence-Based Answers**: Grounds responses in actual PubMed research when available
-- User-Friendly Interface**: Seamless interaction through a web interface powered by Gradio
-- Transparent Sourcing**: Clearly indicates when information comes from PubMed vs general knowledge
+- **Natural Language Processing**: Understands and processes natural language medical queries
+- **PubMed Integration**: Searches the PubMed database for relevant, up-to-date medical literature
+- **LLM Augmentation**: Uses advanced language models (Mistral-7B) to synthesize research findings
+- **Intelligent Keyword Generation**: Automatically converts questions into PubMed-optimized search terms
+- **Evidence-Based Answers**: Grounds responses in actual PubMed research when available
+- **User-Friendly Interface**: Seamless interaction through a web interface powered by Gradio
+- **Transparent Sourcing**: Clearly indicates when information comes from PubMed vs general knowledge
 
 ## 🏗️ Architecture
-
 User Question → Keyword Generation → PubMed Search → Answer Synthesis → Response
 ↓ ↓ ↓ ↓ ↓
 Natural Mistral-7B-Instruct PubMed API Mistral-7B-Instruct Formatted
@@ -34,6 +39,8 @@ Language (Keyword LLM) via PyMed (Answer LLM) Markdown
 with Sources
 
 text
+
+*For detailed architecture diagrams and workflow visualization, see the [Project Presentation](https://www.canva.com/design/DAF-kSKhMmM/wtGEH-f01isdV-sUVJIryg/edit?utm_content=DAF-kSKhMmM&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)*
 
 ## 🚀 Quick Start
 
@@ -46,7 +53,7 @@ text
 ### Installation
 
 1. **Clone the repository:**
-
+```bash
 git clone https://github.com/Saunakghosh10/healthcare-searchtool.git
 cd healthcare-searchtool
 Create and activate virtual environment:
@@ -82,6 +89,26 @@ Open your browser and navigate to http://localhost:7860
 
 Enter medical questions and get AI-generated answers based on PubMed research
 
+🎥 Demo & Presentation
+Interactive Demo: Access the live interface at http://localhost:7860 after installation
+
+Project Presentation: Complete overview available at:
+📊 Canva Presentation
+
+Presentation covers:
+
+Project motivation and objectives
+
+System architecture and design decisions
+
+Technical implementation details
+
+Performance metrics and validation
+
+Challenges faced and solutions
+
+Future roadmap and enhancements
+
 🧪 Example Questions
 Try these example questions:
 
@@ -109,19 +136,21 @@ Preventive Medicine:
 
 text
 What are the risk factors for developing type 2 diabetes?
+More examples and use cases in the project presentation
 
-
-### 🛠️ Technical Details
+🛠️ Technical Details
 Components
-- **PubMedFetcher: Custom Haystack component that queries PubMed API and returns standardized documents
+PubMedFetcher: Custom Haystack component that queries PubMed API and returns standardized documents
 
-- **Keyword Generator: Mistral-7B-Instruct model that converts questions to PubMed search terms
+Keyword Generator: Mistral-7B-Instruct model that converts questions to PubMed search terms
 
-- **Answer Generator: Mistral-7B-Instruct model that synthesizes PubMed articles into coherent answers
+Answer Generator: Mistral-7B-Instruct model that synthesizes PubMed articles into coherent answers
 
-- **Prompt Builders: Jinja2 templates for structured prompt generation
+Prompt Builders: Jinja2 templates for structured prompt engineering
 
-- **Pipeline Orchestrator: Haystack Pipeline connecting all components
+Pipeline Orchestrator: Haystack Pipeline connecting all components
+
+Detailed component breakdown in the presentation slides
 
 Models Used
 Primary Model: mistralai/Mistral-7B-Instruct-v0.2
@@ -151,7 +180,7 @@ config.json: Model selection, PubMed settings, generation parameters
 
 Prompt templates: Customizable prompt engineering for different use cases
 
-### 📊 Performance
+📊 Performance
 Average Response Time: 10-15 seconds
 
 PubMed Search Relevance: ~85% precision
@@ -162,8 +191,9 @@ Token Usage: ~600-800 tokens per query
 
 Supported Queries: All medical/biomedical topics covered by PubMed
 
-### 🔧 Customization
+Performance metrics and validation details in the presentation
 
+🔧 Customization
 Changing Models
 Edit config.json to use different models:
 
@@ -195,7 +225,7 @@ Your custom prompt template here...
 prompt_template = """
 Your custom answer generation template here...
 """
-### ⚠️ Limitations & Disclaimer
+⚠️ Limitations & Disclaimer
 Important Limitations
 Not Medical Advice: This tool is for educational and research purposes only
 
@@ -215,6 +245,34 @@ Fallback to general knowledge when PubMed lacks information
 Source attribution for transparency
 
 Response length limiting to prevent information overload
+
+🎯 Use Cases
+Target Users:
+Medical Students - Quick research and literature reviews
+
+Healthcare Professionals - Staying updated with latest research
+
+Researchers - Identifying relevant papers and trends
+
+Patients - Understanding medical conditions (with professional consultation)
+
+Educators - Teaching medical concepts with current references
+
+Complete user personas and use case scenarios in the project presentation
+
+📈 Future Enhancements
+Planned Features:
+Conversation Memory - Follow-up question support
+
+Multi-language Support - Beyond English queries
+
+Citation Links - Direct links to PubMed articles
+
+Advanced Filtering - By publication date, study type, etc.
+
+Export Functionality - Save answers as PDF/Word documents
+
+Complete roadmap and future plans detailed in the presentation
 
 🤝 Contributing
 Contributions are welcome! Please feel free to submit a Pull Request.
@@ -243,7 +301,7 @@ Performance optimizations
 📄 License
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-### 🙏 Acknowledgments
+🙏 Acknowledgments
 PubMed for providing access to biomedical literature
 
 Hugging Face for hosting the language models
@@ -253,3 +311,26 @@ Haystack for the NLP framework
 Gradio for the UI framework
 
 Mistral AI for the language models
+
+📞 Support
+For issues, questions, or suggestions:
+
+Check the Issues page
+
+Create a new issue with detailed description
+
+Email: healthcare.chatbot@gmail.com
+
+📚 Additional Resources
+Project Presentation: Canva Slides
+
+Demo Video: [Add your demo video link here]
+
+Technical Documentation: [Add your documentation link here]
+
+Research Paper: [Add your paper link here if applicable]
+
+Disclaimer: This application is intended for research and educational purposes only. It is not a substitute for professional medical advice, diagnosis, or treatment. Always seek the advice of your physician or other qualified health provider with any questions you may have regarding a medical condition.
+
+Made with ❤️ for the medical research community.
+
