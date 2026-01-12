@@ -17,13 +17,13 @@ PubMed Healthcare Chatbot is an AI-powered assistant designed to provide healthc
 
 ### ✨ Key Features
 
-- **Natural Language Processing**: Understands and processes natural language medical queries
-- **PubMed Integration**: Searches the PubMed database for relevant, up-to-date medical literature
-- **LLM Augmentation**: Uses advanced language models (Mistral-7B) to synthesize research findings
-- **Intelligent Keyword Generation**: Automatically converts questions into PubMed-optimized search terms
-- **Evidence-Based Answers**: Grounds responses in actual PubMed research when available
-- **User-Friendly Interface**: Seamless interaction through a web interface powered by Gradio
-- **Transparent Sourcing**: Clearly indicates when information comes from PubMed vs general knowledge
+- Natural Language Processing**: Understands and processes natural language medical queries
+- PubMed Integration**: Searches the PubMed database for relevant, up-to-date medical literature
+- LLM Augmentation**: Uses advanced language models (Mistral-7B) to synthesize research findings
+- Intelligent Keyword Generation**: Automatically converts questions into PubMed-optimized search terms
+- Evidence-Based Answers**: Grounds responses in actual PubMed research when available
+- User-Friendly Interface**: Seamless interaction through a web interface powered by Gradio
+- Transparent Sourcing**: Clearly indicates when information comes from PubMed vs general knowledge
 
 ## 🏗️ Architecture
 
