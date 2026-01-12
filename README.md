@@ -113,15 +113,15 @@ What are the risk factors for developing type 2 diabetes?
 
 ### 🛠️ Technical Details
 Components
-PubMedFetcher: Custom Haystack component that queries PubMed API and returns standardized documents
+- **PubMedFetcher: Custom Haystack component that queries PubMed API and returns standardized documents
 
-Keyword Generator: Mistral-7B-Instruct model that converts questions to PubMed search terms
+- **Keyword Generator: Mistral-7B-Instruct model that converts questions to PubMed search terms
 
-Answer Generator: Mistral-7B-Instruct model that synthesizes PubMed articles into coherent answers
+- **Answer Generator: Mistral-7B-Instruct model that synthesizes PubMed articles into coherent answers
 
-Prompt Builders: Jinja2 templates for structured prompt generation
+- **Prompt Builders: Jinja2 templates for structured prompt generation
 
-Pipeline Orchestrator: Haystack Pipeline connecting all components
+- **Pipeline Orchestrator: Haystack Pipeline connecting all components
 
 Models Used
 Primary Model: mistralai/Mistral-7B-Instruct-v0.2
