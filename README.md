@@ -610,13 +610,13 @@ Special thanks to the teams and organizations that made this possible:
 <td align="center">
 
 📊 **Project Presentation**  
-[Canva Slides](https://www.canva.com/design/DAF-kSKhMmM/wtGEH-f01isdV-sUVJIryg/edit)
+[Canva Slides]([https://www.canva.com/design/DAF-kSKhMmM/wtGEH-f01isdV-sUVJIryg/edit](https://www.canva.com/design/DAF-kSKhMmM/OBKy10EcvbKHR7F6WD9mZg/view?utm_content=DAF-kSKhMmM&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h6670f550e5))
 
 </td>
 <td align="center">
 
 🎥 **Demo Video**  
-[Add your demo link]
+[[Add your demo link](https://www.canva.com/design/DAF-kSKhMmM/OBKy10EcvbKHR7F6WD9mZg/view?utm_content=DAF-kSKhMmM&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h6670f550e5)]
 
 </td>
 </tr>
