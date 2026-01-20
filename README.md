@@ -1,6 +1,7 @@
-# BioInquire-1
+<div align="center">
 
-# PubMed Healthcare Chatbot 🏥🤖
+# 🏥 BioInquire-1
+### *PubMed Healthcare Chatbot*
 
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![Haystack 2.0](https://img.shields.io/badge/Haystack-2.0-orange.svg)](https://haystack.deepset.ai/)
@@ -11,328 +12,641 @@
 
 ![Healthcare Chatbot Demo](https://github.com/Saunakghosh10/healthcare-searchtool/assets/76943154/7956586a-51fa-4e1d-9fe9-572e1a4a18b3)
 
+---
+
+</div>
+
 ## 📋 Overview
 
-PubMed Healthcare Chatbot is an AI-powered assistant designed to provide healthcare-related information by integrating PubMed search capabilities with Large Language Models (LLMs). This chatbot leverages advanced natural language processing to understand user queries, retrieves relevant articles from PubMed, and generates accurate, evidence-based responses.
+**BioInquire-1** is an AI-powered healthcare assistant that bridges the gap between medical questions and evidence-based answers. By integrating **PubMed's vast medical literature** with **Large Language Models**, it delivers accurate, research-backed responses to healthcare queries.
+
+<table>
+<tr>
+<td width="50%">
+
+### 🎯 **What It Does**
+- Searches PubMed for relevant medical research
+- Synthesizes findings using AI
+- Provides evidence-based answers
+- Cites sources transparently
+
+</td>
+<td width="50%">
+
+### 💡 **Why It Matters**
+- Instant access to medical literature
+- Reduces research time from hours to seconds
+- Grounded in peer-reviewed research
+- User-friendly for non-experts
+
+</td>
+</tr>
+</table>
+
+---
 
 ## 📊 Project Presentation
 
-**View the complete project presentation:** [Canva Presentation](https://www.canva.com/design/DAF-kSKhMmM/wtGEH-f01isdV-sUVJIryg/edit?utm_content=DAF-kSKhMmM&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
+<div align="center">
 
-*Includes: Project architecture, workflow diagrams, technical implementation, challenges & solutions, and future enhancements.*
+### 📚 **Complete Project Documentation**
 
-### ✨ Key Features
+[![View Presentation](https://img.shields.io/badge/View_on-Canva-00C4CC?style=for-the-badge&logo=canva&logoColor=white)](https://www.canva.com/design/DAF-kSKhMmM/wtGEH-f01isdV-sUVJIryg/edit?utm_content=DAF-kSKhMmM&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
 
-- **Natural Language Processing**: Understands and processes natural language medical queries
-- **PubMed Integration**: Searches the PubMed database for relevant, up-to-date medical literature
-- **LLM Augmentation**: Uses advanced language models (Mistral-7B) to synthesize research findings
-- **Intelligent Keyword Generation**: Automatically converts questions into PubMed-optimized search terms
-- **Evidence-Based Answers**: Grounds responses in actual PubMed research when available
-- **User-Friendly Interface**: Seamless interaction through a web interface powered by Gradio
-- **Transparent Sourcing**: Clearly indicates when information comes from PubMed vs general knowledge
+**Includes:** Architecture diagrams • Workflow visualization • Technical implementation • Challenges & solutions • Future roadmap
 
-## 🏗️ Architecture
-User Question → Keyword Generation → PubMed Search → Answer Synthesis → Response
-↓ ↓ ↓ ↓ ↓
-Natural Mistral-7B-Instruct PubMed API Mistral-7B-Instruct Formatted
-Language (Keyword LLM) via PyMed (Answer LLM) Markdown
-with Sources
+</div>
 
-text
+---
 
-*For detailed architecture diagrams and workflow visualization, see the [Project Presentation](https://www.canva.com/design/DAF-kSKhMmM/wtGEH-f01isdV-sUVJIryg/edit?utm_content=DAF-kSKhMmM&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)*
+## ✨ Key Features
+
+<div align="center">
+
+| 🧠 NLP Processing | 📚 PubMed Integration | 🤖 LLM Augmentation |
+|:---:|:---:|:---:|
+| Understands natural language medical queries | Searches up-to-date medical literature | Synthesizes research using Mistral-7B |
+
+| 🔍 Smart Keywords | 📖 Evidence-Based | 🎨 User-Friendly |
+|:---:|:---:|:---:|
+| Auto-generates optimized search terms | Grounds responses in actual research | Seamless Gradio web interface |
+
+</div>
+
+### 🌟 **Core Capabilities**
+
+```
+✓ Natural Language Processing - Understands medical terminology and context
+✓ PubMed Integration - Real-time access to 35+ million citations
+✓ Intelligent Keyword Generation - Optimizes queries for PubMed search
+✓ LLM Synthesis - Mistral-7B-Instruct for coherent answer generation
+✓ Transparent Sourcing - Clear attribution to PubMed vs general knowledge
+✓ Evidence-Based Responses - Backed by peer-reviewed research
+```
+
+---
+
+## 🏗️ System Architecture
+
+<div align="center">
+
+```ascii
+┌─────────────┐     ┌──────────────┐     ┌─────────────┐     ┌──────────────┐     ┌──────────┐
+│    User     │────▶│   Keyword    │────▶│   PubMed    │────▶│   Answer     │────▶│ Response │
+│  Question   │     │  Generation  │     │   Search    │     │  Synthesis   │     │ (Sources)│
+└─────────────┘     └──────────────┘     └─────────────┘     └──────────────┘     └──────────┘
+                          │                     │                    │
+                    Mistral-7B            PubMed API          Mistral-7B
+                    (Keyword LLM)          via PyMed          (Answer LLM)
+```
+
+</div>
+
+### 📦 **Component Breakdown**
+
+| Component | Technology | Purpose |
+|-----------|------------|---------|
+| **Keyword Generator** | Mistral-7B-Instruct | Converts questions to PubMed search terms |
+| **PubMed Fetcher** | PyMed API | Retrieves relevant medical articles |
+| **Answer Synthesizer** | Mistral-7B-Instruct | Generates coherent, evidence-based answers |
+| **Pipeline Orchestrator** | Haystack 2.0 | Connects all components seamlessly |
+| **User Interface** | Gradio | Web-based chat interface |
+
+> 💡 **For detailed architecture diagrams:** See the [Project Presentation](https://www.canva.com/design/DAF-kSKhMmM/wtGEH-f01isdV-sUVJIryg/edit?utm_content=DAF-kSKhMmM&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
+
+---
 
 ## 🚀 Quick Start
 
-### Prerequisites
+### 📋 **Prerequisites**
 
-- Python 3.8 or higher
-- Hugging Face account (free)
-- Internet connection for PubMed access
+```yaml
+Required:
+  - Python 3.8+
+  - Hugging Face account (free)
+  - Internet connection
 
-### Installation
+Optional:
+  - PubMed email (for higher rate limits)
+```
 
-1. **Clone the repository:**
+### ⚙️ **Installation**
+
+#### 1️⃣ **Clone the Repository**
+
 ```bash
 git clone https://github.com/Saunakghosh10/healthcare-searchtool.git
 cd healthcare-searchtool
 ```
-Create and activate virtual environment:
 
-bash
-# Windows
+#### 2️⃣ **Create Virtual Environment**
+
+<table>
+<tr>
+<th>Windows</th>
+<th>Mac/Linux</th>
+</tr>
+<tr>
+<td>
+
+```bash
 python -m venv venv
 venv\Scripts\activate
+```
 
-# Mac/Linux
+</td>
+<td>
+
+```bash
 python3 -m venv venv
 source venv/bin/activate
-Install dependencies:
+```
 
-bash
+</td>
+</tr>
+</table>
+
+#### 3️⃣ **Install Dependencies**
+
+```bash
 pip install -r requirements.txt
-Set up API keys:
+```
 
-Obtain an API key from Hugging Face
+#### 4️⃣ **Configure API Keys**
 
-Create a .env file in the root directory:
+Create a `.env` file in the root directory:
 
-env
+```env
 HUGGINGFACE_API_KEY=your_huggingface_api_key_here
 PUBMED_EMAIL=your_email@domain.com  # Optional but recommended
-Run the application:
+```
 
-bash
+> 🔑 **Get your Hugging Face API key:** [https://huggingface.co/settings/tokens](https://huggingface.co/settings/tokens)
+
+#### 5️⃣ **Launch the Application**
+
+```bash
 python app.py
-Access the interface:
+```
 
-Open your browser and navigate to http://localhost:7860
+#### 6️⃣ **Access the Interface**
 
-Enter medical questions and get AI-generated answers based on PubMed research
+```
+🌐 Open your browser: http://localhost:7860
+```
 
-🎥 Demo & Presentation
-Interactive Demo: Access the live interface at http://localhost:7860 after installation
+---
 
-Project Presentation: Complete overview available at:
-📊 Canva Presentation
+## 🎥 Demo & Presentation
 
-Presentation covers:
+<div align="center">
 
-Project motivation and objectives
+| 🖥️ Interactive Demo | 📊 Full Presentation |
+|:-------------------:|:--------------------:|
+| Access at `localhost:7860` | [View on Canva](https://www.canva.com/design/DAF-kSKhMmM/wtGEH-f01isdV-sUVJIryg/edit) |
+| Try live queries after installation | Complete project overview |
 
-System architecture and design decisions
+</div>
 
-Technical implementation details
+### 📚 **Presentation Contents**
 
-Performance metrics and validation
+```
+├── Project Motivation & Objectives
+├── System Architecture & Design
+├── Technical Implementation Details
+├── Performance Metrics & Validation
+├── Challenges & Solutions
+└── Future Roadmap & Enhancements
+```
 
-Challenges faced and solutions
+---
 
-Future roadmap and enhancements
+## 🧪 Example Questions
 
-🧪 Example Questions
-Try these example questions:
+### Try These Queries:
 
-Cancer Research:
+<details>
+<summary><b>🔬 Cancer Research</b></summary>
 
-text
+```
 How are mRNA vaccines being used for cancer treatment?
-Neurology:
+What are the latest immunotherapy approaches for melanoma?
+```
+</details>
 
-text
+<details>
+<summary><b>🧠 Neurology</b></summary>
+
+```
 What are the latest treatments for Alzheimer's disease?
-Mental Health:
+How does deep brain stimulation work for Parkinson's?
+```
+</details>
 
-text
+<details>
+<summary><b>💚 Mental Health</b></summary>
+
+```
 Tell me about the relationship between gut microbiome and mental health.
-Chronic Conditions:
+What are effective treatments for treatment-resistant depression?
+```
+</details>
 
-text
+<details>
+<summary><b>⚕️ Chronic Conditions</b></summary>
+
+```
 What are effective non-pharmacological treatments for chronic pain?
-Metabolic Health:
+How can lifestyle modifications help manage hypertension?
+```
+</details>
 
-text
+<details>
+<summary><b>🍎 Metabolic Health</b></summary>
+
+```
 How does intermittent fasting affect metabolic health?
-Preventive Medicine:
+What is the connection between sleep and diabetes management?
+```
+</details>
 
-text
+<details>
+<summary><b>🛡️ Preventive Medicine</b></summary>
+
+```
 What are the risk factors for developing type 2 diabetes?
-More examples and use cases in the project presentation
+How effective are various COVID-19 vaccine platforms?
+```
+</details>
 
-🛠️ Technical Details
-Components
-PubMedFetcher: Custom Haystack component that queries PubMed API and returns standardized documents
+> 📖 **More examples and detailed use cases** in the [project presentation](https://www.canva.com/design/DAF-kSKhMmM/wtGEH-f01isdV-sUVJIryg/edit)
 
-Keyword Generator: Mistral-7B-Instruct model that converts questions to PubMed search terms
+---
 
-Answer Generator: Mistral-7B-Instruct model that synthesizes PubMed articles into coherent answers
+## 🛠️ Technical Details
 
-Prompt Builders: Jinja2 templates for structured prompt engineering
+### 🧩 **Core Components**
 
-Pipeline Orchestrator: Haystack Pipeline connecting all components
+```python
+┌─────────────────────────────────────────────────────────┐
+│ 1. PubMedFetcher (Custom Haystack Component)           │
+│    → Queries PubMed API                                 │
+│    → Returns standardized documents                     │
+├─────────────────────────────────────────────────────────┤
+│ 2. Keyword Generator (Mistral-7B-Instruct)              │
+│    → Converts natural questions to search terms         │
+│    → Optimized for PubMed query syntax                  │
+├─────────────────────────────────────────────────────────┤
+│ 3. Answer Generator (Mistral-7B-Instruct)               │
+│    → Synthesizes PubMed articles                        │
+│    → Generates coherent, evidence-based answers         │
+├─────────────────────────────────────────────────────────┤
+│ 4. Prompt Builders (Jinja2 Templates)                   │
+│    → Structured prompt engineering                      │
+│    → Customizable templates                             │
+├─────────────────────────────────────────────────────────┤
+│ 5. Pipeline Orchestrator (Haystack)                     │
+│    → Connects all components                            │
+│    → Manages data flow                                  │
+└─────────────────────────────────────────────────────────┘
+```
 
-Detailed component breakdown in the presentation slides
+> 📊 **Detailed component breakdown** available in the presentation slides
 
-Models Used
-Primary Model: mistralai/Mistral-7B-Instruct-v0.2
+### 🤖 **Models Used**
 
-7 billion parameters
+#### **Primary Model**
 
-Instruction-tuned for better question answering
+```yaml
+Model: mistralai/Mistral-7B-Instruct-v0.2
 
-32,000 token context window
+Specifications:
+  Parameters: 7 billion
+  Type: Instruction-tuned
+  Context Window: 32,000 tokens
+  Specialization: Medical terminology understanding
+  
+Performance:
+  Response Quality: High
+  Speed: Fast inference
+  Accuracy: Optimized for Q&A
+```
 
-Optimized for medical terminology understanding
+#### **Alternative Models** (configurable in `config.json`)
 
-Alternative Models (configurable in config.json):
+<table>
+<tr>
+<th>Model</th>
+<th>Parameters</th>
+<th>Best For</th>
+</tr>
+<tr>
+<td>mistralai/Mixtral-8x7B-Instruct-v0.1</td>
+<td>8x7B (MoE)</td>
+<td>Complex queries, higher accuracy</td>
+</tr>
+<tr>
+<td>tiiuae/falcon-7b-instruct</td>
+<td>7B</td>
+<td>Alternative 7B option</td>
+</tr>
+<tr>
+<td>google/flan-t5-base</td>
+<td>250M</td>
+<td>Faster responses, lower accuracy</td>
+</tr>
+</table>
 
-mistralai/Mixtral-8x7B-Instruct-v0.1 (larger, more capable)
+### ⚙️ **Configuration**
 
-tiiuae/falcon-7b-instruct (alternative 7B model)
+The system is configurable through:
 
-google/flan-t5-base (smaller, faster option)
+| File | Purpose |
+|------|---------|
+| `.env` | API keys and email settings |
+| `config.json` | Model selection, PubMed settings, generation parameters |
+| Prompt templates | Custom prompt engineering for different use cases |
 
-Configuration
-The system is highly configurable through:
+---
 
-.env file: API keys and email settings
+## 📊 Performance Metrics
 
-config.json: Model selection, PubMed settings, generation parameters
+<div align="center">
 
-Prompt templates: Customizable prompt engineering for different use cases
+| Metric | Value | Notes |
+|--------|-------|-------|
+| ⏱️ **Average Response Time** | 10-15 seconds | End-to-end processing |
+| 🎯 **Search Relevance** | ~85% precision | PubMed results accuracy |
+| ✅ **Answer Accuracy** | ~82% | Against medical reference validation |
+| 💬 **Token Usage** | 600-800 tokens/query | Per complete interaction |
+| 📚 **Coverage** | All PubMed topics | 35+ million citations accessible |
 
-📊 Performance
-Average Response Time: 10-15 seconds
+</div>
 
-PubMed Search Relevance: ~85% precision
+> 📈 **Complete performance analysis and validation** details in the [presentation](https://www.canva.com/design/DAF-kSKhMmM/wtGEH-f01isdV-sUVJIryg/edit)
 
-Answer Accuracy: ~82% against medical reference validation
+---
 
-Token Usage: ~600-800 tokens per query
+## 🔧 Customization
 
-Supported Queries: All medical/biomedical topics covered by PubMed
+### 🔄 **Changing Models**
 
-Performance metrics and validation details in the presentation
+Edit `config.json`:
 
-🔧 Customization
-Changing Models
-Edit config.json to use different models:
-
-json
+```json
 {
-    "models": {
-        "keyword_generator": "tiiuae/falcon-7b-instruct",
-        "answer_generator": "mistralai/Mixtral-8x7B-Instruct-v0.1"
-    }
+  "models": {
+    "keyword_generator": "tiiuae/falcon-7b-instruct",
+    "answer_generator": "mistralai/Mixtral-8x7B-Instruct-v0.1"
+  }
 }
-Adjusting Search Parameters
-Modify PubMed settings in config.json:
+```
 
-json
+### 🔍 **Adjusting Search Parameters**
+
+Modify PubMed settings in `config.json`:
+
+```json
 {
-    "pubmed": {
-        "max_results": 3,  // Increase for more articles
-        "timeout": 15      // Increase timeout for slow connections
-    }
+  "pubmed": {
+    "max_results": 3,    // Increase for more articles
+    "timeout": 15        // Adjust for slow connections
+  }
 }
-Custom Prompt Engineering
-Edit the prompt templates in app.py:
+```
 
-python
+### ✏️ **Custom Prompt Engineering**
+
+Edit templates in `app.py`:
+
+```python
 keyword_prompt_template = """
-Your custom prompt template here...
+Your custom keyword generation prompt...
+Question: {{question}}
 """
 
-prompt_template = """
-Your custom answer generation template here...
+answer_prompt_template = """
+Your custom answer generation prompt...
+Context: {{documents}}
+Question: {{question}}
 """
-⚠️ Limitations & Disclaimer
-Important Limitations
-- Not Medical Advice: This tool is for educational and research purposes only
+```
 
-- Information Currency: PubMed coverage varies by topic; some areas may have limited recent research
+---
 
-- Model Biases: LLMs may inherit biases from training data
+## ⚠️ Limitations & Disclaimer
 
-- API Dependencies: Requires stable internet connection and API availability
+### 🚨 **Important Limitations**
 
-- Response Variability: Answers may vary for the same question due to stochastic generation
+```diff
+! NOT MEDICAL ADVICE
+  This tool is for educational and research purposes ONLY
 
-Safety Features
--Clear disclaimers about non-professional medical advice
+! INFORMATION CURRENCY
+  PubMed coverage varies; some topics may have limited recent research
 
--Fallback to general knowledge when PubMed lacks information
+! MODEL BIASES
+  LLMs may inherit biases from training data
 
--Source attribution for transparency
+! API DEPENDENCIES
+  Requires stable internet and API availability
 
--Response length limiting to prevent information overload
+! RESPONSE VARIABILITY
+  Answers may vary due to stochastic generation
+```
 
-🎯 Use Cases
-Target Users:
-1. Medical Students - Quick research and literature reviews
+### 🛡️ **Safety Features**
 
-2. Healthcare Professionals - Staying updated with latest research
+<table>
+<tr>
+<td>
 
-3. Researchers - Identifying relevant papers and trends
+✅ **Clear Disclaimers**  
+Non-professional medical advice warnings
 
-4. Patients - Understanding medical conditions (with professional consultation)
+</td>
+<td>
 
-5. Educators - Teaching medical concepts with current references
+✅ **Fallback Mechanism**  
+Uses general knowledge when PubMed lacks info
 
-Complete user personas and use case scenarios in the project presentation
+</td>
+</tr>
+<tr>
+<td>
 
-📈 Future Enhancements
-Planned Features:
-Conversation Memory - Follow-up question support
+✅ **Source Attribution**  
+Transparent citation of information sources
 
-Multi-language Support - Beyond English queries
+</td>
+<td>
 
-Citation Links - Direct links to PubMed articles
+✅ **Response Limiting**  
+Prevents information overload
 
-Advanced Filtering - By publication date, study type, etc.
+</td>
+</tr>
+</table>
 
-Export Functionality - Save answers as PDF/Word documents
+---
 
-Complete roadmap and future plans detailed in the presentation
+## 🎯 Use Cases
 
-🤝 Contributing
-Contributions are welcome! Please feel free to submit a Pull Request.
+### 👥 **Target Users**
 
-Fork the repository
+| User Type | Primary Use | Benefits |
+|-----------|-------------|----------|
+| 🎓 **Medical Students** | Quick research & literature reviews | Saves hours of manual searching |
+| 👨‍⚕️ **Healthcare Professionals** | Staying updated with latest research | Access to current evidence |
+| 🔬 **Researchers** | Identifying relevant papers & trends | Accelerates literature review |
+| 🤒 **Patients** | Understanding medical conditions* | Empowered decision-making |
+| 👨‍🏫 **Educators** | Teaching with current references | Up-to-date medical education |
 
-Create your feature branch (git checkout -b feature/AmazingFeature)
+*\*Always consult healthcare professionals for medical decisions*
 
-Commit your changes (git commit -m 'Add some AmazingFeature')
+> 📋 **Complete user personas and scenarios** in the [project presentation](https://www.canva.com/design/DAF-kSKhMmM/wtGEH-f01isdV-sUVJIryg/edit)
 
-Push to the branch (git push origin feature/AmazingFeature)
+---
 
-Open a Pull Request
+## 📈 Future Enhancements
 
-Areas for Contribution
-Additional medical databases integration
+### 🔮 **Planned Features**
 
-Improved prompt engineering
+- [ ] **Conversation Memory** - Support for follow-up questions
+- [ ] **Multi-language Support** - Beyond English queries
+- [ ] **Citation Links** - Direct links to PubMed articles
+- [ ] **Advanced Filtering** - By publication date, study type, etc.
+- [ ] **Export Functionality** - Save answers as PDF/Word documents
+- [ ] **Mobile App** - iOS and Android applications
+- [ ] **Voice Interface** - Voice-based queries and responses
+- [ ] **Collaborative Features** - Share and discuss findings
 
-Enhanced error handling
+> 🗺️ **Complete roadmap and timeline** detailed in the [presentation](https://www.canva.com/design/DAF-kSKhMmM/wtGEH-f01isdV-sUVJIryg/edit)
 
-Additional language support
+---
 
-Performance optimizations
+## 🤝 Contributing
 
-📄 License
-This project is licensed under the MIT License - see the LICENSE file for details.
+Contributions are **welcome**! Help us make BioInquire-1 even better.
 
-🙏 Acknowledgments
-PubMed for providing access to biomedical literature
+### 📝 **How to Contribute**
 
-Hugging Face for hosting the language models
+```bash
+1. Fork the repository
+2. Create feature branch:    git checkout -b feature/AmazingFeature
+3. Commit your changes:      git commit -m 'Add AmazingFeature'
+4. Push to branch:           git push origin feature/AmazingFeature
+5. Open a Pull Request
+```
 
-Haystack for the NLP framework
+### 🎯 **Areas for Contribution**
 
-Gradio for the UI framework
+<table>
+<tr>
+<td>
 
-Mistral AI for the language models
+- 🔗 Additional medical databases integration
+- 🎨 Improved prompt engineering
+- 🛠️ Enhanced error handling
 
-📞 Support
-For issues, questions, or suggestions:
+</td>
+<td>
 
-Check the Issues page
+- 🌍 Additional language support
+- ⚡ Performance optimizations
+- 📱 Mobile app development
 
-Create a new issue with detailed description
+</td>
+</tr>
+</table>
 
-Email: healthcare.chatbot@gmail.com
+---
 
-📚 Additional Resources
-Project Presentation: Canva Slides
+## 📄 License
 
-Demo Video: [Add your demo video link here] 
+This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
 
+---
 
-Technical Documentation: [Add your documentation link here]
+## 🙏 Acknowledgments
 
-Research Paper: [Add your paper link here if applicable]
+<div align="center">
 
-Disclaimer: This application is intended for research and educational purposes only. It is not a substitute for professional medical advice, diagnosis, or treatment. Always seek the advice of your physician or other qualified health provider with any questions you may have regarding a medical condition.
+Special thanks to the teams and organizations that made this possible:
 
-Made with ❤️ for the medical research community.
+**📚 PubMed** - Access to biomedical literature  
+**🤗 Hugging Face** - Hosting language models  
+**🔧 Haystack** - NLP framework foundation  
+**🎨 Gradio** - User interface framework  
+**🤖 Mistral AI** - Powerful language models
 
+</div>
+
+---
+
+## 📞 Support & Contact
+
+<div align="center">
+
+### Need Help? We're Here!
+
+| 📋 Issues | ✉️ Email | 📖 Documentation |
+|:---------:|:--------:|:----------------:|
+| [GitHub Issues](../../issues) | healthcare.chatbot@gmail.com | [Project Presentation](https://www.canva.com/design/DAF-kSKhMmM/wtGEH-f01isdV-sUVJIryg/edit) |
+
+</div>
+
+**For bug reports or feature requests:**
+1. Check existing [Issues](../../issues)
+2. Create new issue with detailed description
+3. Include error logs if applicable
+
+---
+
+## 📚 Additional Resources
+
+<table>
+<tr>
+<td align="center">
+
+📊 **Project Presentation**  
+[Canva Slides](https://www.canva.com/design/DAF-kSKhMmM/wtGEH-f01isdV-sUVJIryg/edit)
+
+</td>
+<td align="center">
+
+🎥 **Demo Video**  
+[Add your demo link]
+
+</td>
+</tr>
+<tr>
+<td align="center">
+
+📖 **Technical Documentation**  
+[Add your docs link]
+
+</td>
+<td align="center">
+
+---
+
+<div align="center">
+
+## ⚕️ Medical Disclaimer
+
+**This application is intended for research and educational purposes only.**
+
+It is **NOT a substitute** for professional medical advice, diagnosis, or treatment.  
+Always seek the advice of your physician or other qualified health provider  
+with any questions you may have regarding a medical condition.
+
+---
+
+### Made with ❤️ for the medical research community
+
+⭐ **If you find this project useful, please consider giving it a star!**
+
+![Visitors](https://visitor-badge.laobi.icu/badge?page_id=Saunakghosh10.healthcare-searchtool)
+
+</div>
